@@ -1,0 +1,288 @@
+/* Copyright (c) 2014-2015, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+&tlmm {
+/*********** audio MI2S gpio config start ***********/
+		prim_mi2s {
+			pri_mi2s_sleep: pri_mi2s_sleep {
+				mux {
+					pins = "gpio65", "gpio66";
+					function = "pri_mi2s";
+				};
+				config {
+					pins = "gpio65", "gpio66";
+					drive-strength = <2>;   /* 2 mA */
+					bias-pull-down;         /* PULL DOWN */
+				};
+			};
+			pri_mi2s_active: pri_mi2s_active {
+				mux {
+					pins = "gpio65", "gpio66";
+					function = "pri_mi2s";
+				};
+				config {
+					pins = "gpio65", "gpio66";
+					drive-strength = <8>;   /* 8 mA */
+					bias-disable;           /* NO PULL */
+					output-high;
+				};
+			};
+		};
+
+		prim_mi2s_mclk {
+			pri_mi2s_mclk_sleep: pri_mi2s_mclk_sleep {
+				mux {
+					pins = "gpio64";
+					function = "pri_mi2s";
+				};
+				config {
+					pins = "gpio64";
+					drive-strength = <2>;   /* 2 mA */
+					bias-pull-down;         /* PULL DOWN */
+				};
+			};
+			pri_mi2s_mclk_active: pri_mi2s_mclk_active {
+				mux {
+					pins = "gpio64";
+					function = "pri_mi2s";
+				};
+				config {
+					pins = "gpio64";
+					drive-strength = <8>;   /* 8 mA */
+					bias-disable;           /* NO PULL */
+					output-high;
+				};
+			};
+		};
+
+		prim_mi2s_sd0 {
+			pri_mi2s_sd0_sleep: pri_mi2s_sd0_sleep {
+				mux {
+					pins = "gpio67";
+					function = "pri_mi2s";
+				};
+				config {
+					pins = "gpio67";
+					drive-strength = <2>;   /* 2 mA */
+					bias-pull-down;         /* PULL DOWN */
+				};
+			};
+			pri_mi2s_sd0_active: pri_mi2s_sd0_active {
+				mux {
+					pins = "gpio67";
+					function = "pri_mi2s";
+				};
+				config {
+					pins = "gpio67";
+					drive-strength = <8>;   /* 8 mA */
+					bias-disable;           /* NO PULL */
+				};
+			};
+		};
+
+		prim_mi2s_sd1 {
+			pri_mi2s_sd1_sleep: pri_mi2s_sd1_sleep {
+				mux {
+					pins = "gpio68";
+					function = "pri_mi2s";
+				};
+				config {
+					pins = "gpio68";
+					drive-strength = <2>;   /* 2 mA */
+					bias-pull-down;         /* PULL DOWN */
+				};
+			};
+			pri_mi2s_sd1_active: pri_mi2s_sd1_active {
+				mux {
+					pins = "gpio68";
+					function = "pri_mi2s";
+				};
+				config {
+					pins = "gpio68";
+					drive-strength = <8>;   /* 8 mA */
+					bias-disable;           /* NO PULL */
+				};
+			};
+		};
+
+		sec_mi2s {
+		};
+
+		sec_mi2s_mclk {
+			sec_mi2s_mclk_sleep: sec_mi2s_mclk_sleep {
+				mux {
+					pins = "gpio79";
+					function = "sec_mi2s";
+				};
+				config {
+					pins = "gpio79";
+					drive-strength = <2>;   /* 2 mA */
+					bias-pull-down;         /* PULL DOWN */
+				};
+			};
+			sec_mi2s_mclk_active: sec_mi2s_mclk_active {
+				mux {
+					pins = "gpio79";
+					function = "sec_mi2s";
+				};
+				config {
+					pins = "gpio79";
+					drive-strength = <8>;   /* 8 mA */
+					bias-disable;           /* NO PULL */
+					output-high;
+				};
+			};
+		};
+
+		sec_mi2s_sd0 {
+		};
+
+		sec_mi2s_sd1 {
+		};
+
+		tert_mi2s {
+		};
+
+		tert_mi2s_sd0 {
+		};
+
+		tert_mi2s_sd1 {
+		};
+
+		quat_mi2s {
+		};
+
+		quat_mi2s_mclk {
+			quat_mi2s_mclk_sleep: quat_mi2s_mclk_sleep {
+				mux {
+					pins = "gpio57";
+					function = "qua_mi2s";
+				};
+				config {
+					pins = "gpio57";
+					drive-strength = <2>;   /* 2 mA */
+					bias-pull-down;         /* PULL DOWN */
+				};
+			};
+			quat_mi2s_mclk_active: quat_mi2s_mclk_active {
+				mux {
+					pins = "gpio57";
+					function = "qua_mi2s";
+				};
+				config {
+					pins = "gpio57";
+					drive-strength = <8>;   /* 8 mA */
+					bias-disable;           /* NO PULL */
+					output-high;
+				};
+			};
+		};
+
+		quat_mi2s_sd0 {
+		};
+
+		quat_mi2s_sd1 {
+		};
+
+		quat_mi2s_sd2 {
+			quat_mi2s_sd2_sleep: quat_mi2s_sd2_sleep {
+				mux {
+					pins = "gpio62";
+					function = "qua_mi2s";
+				};
+				config {
+					pins = "gpio62";
+					drive-strength = <2>;   /* 2 mA */
+					bias-pull-down;         /* PULL DOWN */
+				};
+			};
+			quat_mi2s_sd2_active: quat_mi2s_sd2_active {
+				mux {
+					pins = "gpio62";
+					function = "qua_mi2s";
+				};
+				config {
+					pins = "gpio62";
+					drive-strength = <8>;   /* 8 mA */
+					bias-disable;           /* NO PULL */
+				};
+			};
+		};
+/*********** audio MI2S gpio config end ***********/
+
+/*********** lcd gpio config start ***********/
+/*********** lcd gpio config end ***********/
+
+/*********** IR MAXQ616 config start ***********/
+	blsp2_uart6_active: blsp2_uart6_active {
+		mux {
+			pins = "gpio85", "gpio86";
+			function = "blsp_uart12";
+		};
+
+		config {
+			pins = "gpio85", "gpio86";
+			drive-strength = <2>;
+			bias-disable = <0>;
+		};
+	};
+
+	blsp2_uart6_sleep: blsp2_uart6_sleep {
+		mux {
+			pins = "gpio85", "gpio86";
+			function = "gpio";
+		};
+
+		config {
+			pins = "gpio85", "gpio86";
+			drive-strength = <2>;
+			bias_disable = <0>;
+			output-low;
+		};
+	};
+/*********** IR MAXQ616 config end ***********/
+
+/* sec_mi2s redefine removed: handled via 4.4 platform defaults */
+
+/*********** force touch gpio config start ***********/
+		ft_mux {
+			ft_active: ft_active {
+				mux {
+					pins = "gpio58", "gpio59";
+					function = "gpio";
+				};
+
+				config {
+					pins = "gpio58", "gpio59";
+					drive-strength = <16>;
+					bias-pull-up;
+				};
+			};
+
+			ft_suspend: ft_suspend {
+				mux {
+					pins = "gpio58", "gpio59";
+					function = "gpio";
+				};
+
+				config {
+					pins = "gpio58", "gpio59";
+					drive-strength = <2>;
+					bias-disable;
+				};
+			};
+		};
+/*********** force touch gpio config end ***********/
+/*********** Rear/Front Camera config start ***********/
+/*********** Rear/Front Camera config end ***********/
+	
+};
