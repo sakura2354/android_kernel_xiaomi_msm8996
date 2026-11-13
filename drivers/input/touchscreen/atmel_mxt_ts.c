@@ -7001,6 +7001,8 @@ MODULE_DEVICE_TABLE(i2c, mxt_id);
 #ifdef CONFIG_OF
 static struct of_device_id mxt_match_table[] = {
 	{ .compatible = "atmel,mxt-ts",},
+	/* LeEco le_x2 vendor DT uses this compatible */
+	{ .compatible = "atmel,atmel_mxt_ts",},
 	{ },
 };
 #else
