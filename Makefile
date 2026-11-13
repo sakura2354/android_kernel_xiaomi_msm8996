@@ -1177,6 +1177,19 @@ firmware_install:
 # Kernel headers
 
 #Default location for installed headers
+
+# --- dsh: include fix v2 ---
+KBUILD_CPPFLAGS += -I$(srctree)/drivers/gpu/msm
+KBUILD_CPPFLAGS += -I$(srctree)/drivers/misc
+KBUILD_CPPFLAGS += -I$(srctree)/drivers/nfc/pn548
+KBUILD_CPPFLAGS += -I$(srctree)/drivers/media/platform/msm/camera_v2/common
+KBUILD_CPPFLAGS += -I$(srctree)/drivers/media/platform/msm/camera_v2/sensor/io
+KBUILD_CPPFLAGS += -I$(srctree)/drivers/media/platform/msm/camera_v2/sensor/ois
+KBUILD_CPPFLAGS += -I$(srctree)/drivers/net/ethernet/msm
+KBUILD_CPPFLAGS += -I$(srctree)/drivers/platform/msm/mhi
+KBUILD_CPPFLAGS += -I$(srctree)/drivers/platform/msm/ipa
+KBUILD_CPPFLAGS += -I$(srctree)/drivers/staging/android
+# --- end ---
 export INSTALL_HDR_PATH = $(objtree)/usr
 
 # If we do an all arch process set dst to asm-$(hdr-arch)
